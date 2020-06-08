@@ -1,7 +1,7 @@
 #Date: 2020.03.10
 #Author: Michael Volk 
 
-file_name <- 'BioscreenC/Mv_ex12_single_mutants_.tsv' 
+file_name <- 'BioscreenC/Mv_ex12_single_mutants.tsv' 
         
 library(dplyr)
 
@@ -36,7 +36,7 @@ plate_comb <- cbind(plate_L,plate_R)
 #miss pip
 
 
-sample_list <- read.csv('BioscreenC_ex1.csv')
+sample_list <- read.csv('BioscreenC/experiments/ex12/Mv_ex12_sample_list.csv')
 directory <- ('position_list')
 
 growth_data <- c()
@@ -243,14 +243,3 @@ g2 <- ggplot(growth_data_comb, aes(x = Systematic_Sample, y = fitness, fill = Sy
 g2
 
 ggsave("g2.pdf")
-
-
-#zoom
-
-
-
-
-
-
-
-
