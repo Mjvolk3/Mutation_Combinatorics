@@ -5,7 +5,7 @@ plot_fitness <- function(fitness_data,
                          yaxis = "fitness_mu",
                          error_bars = "fitness_ci",
                          title = "Fitness Scores",
-                         subtitle = "Single Mutant Contorls"){
+                         subtitle = "Single Mutant Controls"){
         #original arguments
         # fitness_data <- process_PRECOG(PRECOG_file, sample_list, plate_rotation = "L", percent_confidence = 0.90)
         # yaxis <- "fitness_mu"

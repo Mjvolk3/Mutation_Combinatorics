@@ -86,6 +86,7 @@ mutant_fitness_compare <- function(fitness_data){
         fitness_compare_data <- fitness_compare_data %>% arrange(Systematic_Name)
         fitness_compare_data$Systematic_Sample <- factor(fitness_compare_data$Systematic_Sample, 
                                                          levels = fitness_compare_data$Systematic_Sample)
+        fitness_compare_data <- fitness_compare_data %>% mutate(local_directory = fitness_data$local_directory[[1]])
         
         return(fitness_compare_data)
 }

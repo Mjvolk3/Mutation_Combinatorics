@@ -12,6 +12,7 @@ process_PRECOG <- function(PRECOG_file,
         
         #libraries
         library(dplyr)
+        library(stringr)
         
         #read PRECOG data
         df <- read.table(PRECOG_file, sep = '\t', header = TRUE)
@@ -111,5 +112,8 @@ process_PRECOG <- function(PRECOG_file,
                                  str_split(PRECOG_file, "/")[[1]][2],"/",
                                  str_split(PRECOG_file, "/")[[1]][3])
         dir_data <- list(c(experiment_dir, growth_data))
-        return(dir_data)
+        data <- as.data.frame(dir_data)
+        colnames(data)[[1]] <- "local_directory"
+
+        return(data)
 }
